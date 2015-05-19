@@ -8,9 +8,23 @@ html{
 }
 
 body{
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 4em;
+  color: #fff;
+  text-align: center;
   background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%,800, from(#A4C663), to(#557714));
 }
 
 .stopwatch {
   @include outer-container(860px);
+}
+
+.minutes::before {
+    content: ":";
+    color: #fff;
+}
+
+.seconds::before {
+    content: ":";
+    color: #fff;
 }
