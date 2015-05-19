@@ -1,20 +1,23 @@
 (function() {
   'use strict';
 
+//VARIABLES
+
+var currentTime;
 var $display = document.querySelector('.display-time');
 
 
-function showTime(event){
-  var currentTime = new Date();
+function startStopwatch(event){
+  currentTime = new Date();
   console.log(currentTime);
+  $display.textContent = currentTime;
 }
 
-
-window.addEventListener('load', showTime, false)
-
+window.setInterval(startStopwatch, 1000);
 
 
+//EVENT LISTENERS
 
-
+window.addEventListener('load', startStopwatch, false);
 
 })();
