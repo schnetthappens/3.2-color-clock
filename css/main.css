@@ -1,0 +1,22 @@
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+html {
+  height: 100%; }
+
+body {
+  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 800, from(#A4C663), to(#557714)); }
+
+.stopwatch {
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto; }
+  .stopwatch::after {
+    clear: both;
+    content: "";
+    display: table; }

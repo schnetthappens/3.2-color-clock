@@ -1,0 +1,16 @@
+@import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
+@import '../bower_components/neat/app/assets/stylesheets/neat';
+
+
+
+html{
+  height: 100%;
+}
+
+body{
+  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%,800, from(#A4C663), to(#557714));
+}
+
+.stopwatch {
+  @include outer-container(860px);
+}
