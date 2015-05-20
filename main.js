@@ -15,14 +15,30 @@ function startStopwatch(event){
   var hours = currentTime.getHours();
   var minutes = currentTime.getMinutes();
   var seconds = currentTime.getSeconds();
-  $hours.textContent = hours;
-  $minutes.textContent = minutes;
-  $seconds.textContent = seconds;
+
+      if (seconds < 10) {
+        seconds = "0" + seconds;
+      }
+      if (minutes < 10) {
+        minutes = "0" + minutes;
+      }
+
+      $hours.textContent = hours;
+      $minutes.textContent = minutes;
+      $seconds.textContent = seconds;
 }
 
 window.setInterval(startStopwatch, 1000);
 
-
+// function addZeros(currentTime) {
+//   if {
+//     (seconds > 10);
+//     ("0" + seconds);
+//   }
+//   if  {
+//     (minutes > 10);
+//     ("0" + seconds);
+//   }
 
 
 //EVENT LISTENERS

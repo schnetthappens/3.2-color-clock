@@ -2,7 +2,6 @@
 @import '../bower_components/neat/app/assets/stylesheets/neat';
 
 
-
 html{
   height: 100%;
 }
@@ -19,12 +18,21 @@ body{
   @include outer-container(860px);
 }
 
-.minutes::before {
-    content: ":";
-    color: #fff;
+.display-time {
+  margin-bottom: 0;
 }
 
-.seconds::before {
-    content: ":";
-    color: #fff;
+  .minutes::before {
+      content: ":";
+      color: #fff;
+  }
+
+  .seconds::before {
+      content: ":";
+      color: #fff;
+  }
+
+.line {
+  height: 5px;
+  background-color: #fff;
 }

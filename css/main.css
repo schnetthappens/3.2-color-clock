@@ -25,6 +25,9 @@ body {
     content: "";
     display: table; }
 
+.display-time {
+  margin-bottom: 0; }
+
 .minutes::before {
   content: ":";
   color: #fff; }
@@ -32,3 +35,7 @@ body {
 .seconds::before {
   content: ":";
   color: #fff; }
+
+.line {
+  height: 5px;
+  background-color: #fff; }
