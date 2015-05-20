@@ -38,4 +38,5 @@ body {
 
 .line {
   height: 5px;
-  background-color: #fff; }
+  background-color: #fff;
+  margin: 0 auto; }

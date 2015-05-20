@@ -8,6 +8,7 @@ var $hours = document.querySelector('.hours');
 var $minutes = document.querySelector('.minutes');
 var $seconds = document.querySelector('.seconds');
 var $display = document.querySelector('.display-time');
+var $line = document.querySelector('.line');
 
 
 function startStopwatch(event){
@@ -22,6 +23,11 @@ function startStopwatch(event){
       if (minutes < 10) {
         minutes = "0" + minutes;
       }
+      if (hours < 10) {
+        hours = "0" + minutes;
+      }
+
+      extendLine();
 
       $hours.textContent = hours;
       $minutes.textContent = minutes;
@@ -30,15 +36,15 @@ function startStopwatch(event){
 
 window.setInterval(startStopwatch, 1000);
 
-// function addZeros(currentTime) {
-//   if {
-//     (seconds > 10);
-//     ("0" + seconds);
-//   }
-//   if  {
-//     (minutes > 10);
-//     ("0" + seconds);
-//   }
+
+function extendLine() {
+  var currentTime = new Date();
+  var seconds = currentTime.getSeconds();
+  var percentWidth = (seconds/60) * 100;
+  var lineWidth = String(percentWidth + "%");
+  $line.style.width = lineWidth;
+}
+
 
 
 //EVENT LISTENERS
